@@ -1,0 +1,11 @@
+<h1><%= @list.name %></h1>
+<ul>
+  <% @list.movies.each do |movie| %>
+    <p>
+      <%= movie.title %> |
+      <%= link_to "Remove", bookmark_path(movie), method: :delete %>
+    </p>
+    <img src="<%= movie.poster_url %>" alt="Poster of <%= movie.title %>">
+  <% end %>
+</ul>
+<p><%= link_to "Add Bookmark", new_list_bookmark_path(@list) %></p>
