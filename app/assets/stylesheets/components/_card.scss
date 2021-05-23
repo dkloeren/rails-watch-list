@@ -1,0 +1,140 @@
+.card-wrap {
+  justify-self: center;
+  align-self: center;
+  width: 400px;
+  height: 200px;
+  position: relative;
+}
+
+.card-container {
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: black;
+  border: solid;
+  border-color: $background_dark;
+  border-radius: 10px;
+  transition: border-color 0.2s;
+  // margin: 20px;
+
+  &:hover {
+    border-color: $blue-purple;
+    z-index: 11;
+  }
+}
+
+.card_image_wrap {
+  width: 50%;
+  height: 100%;
+}
+
+.card-list {
+  position: absolute;
+}
+
+.card-title {
+  position: absolute;
+  left: 20px;
+  top: 16px;
+}
+
+.card-filter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px 8px 8px 8px;
+}
+
+.card-list-img {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &.img-fade-right {
+    opacity: 1;
+    border-radius: 0 8px 8px 0;
+    background-position: 50% 40%;
+    -webkit-mask-image: -webkit-linear-gradient(160deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 70%);
+  }
+
+  &.img-fade-left {
+    opacity: 0.7;
+    right: 100px;
+    background-position: 50% 40%;
+    -webkit-mask-image: -webkit-linear-gradient(160deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 70%);
+  }
+}
+
+.card-remove {
+  z-index: 10;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: - 10px;
+  right: -10px;
+  background: $background_dark;
+  border: solid;
+  border-color: black;
+  color: black;
+  font-size: 60;
+  font-weight: bold;
+  border-radius: 50%;
+  text-align: center;
+  justify: center;
+  transition: border-color 0.2s, color 0.2s;
+
+  &:hover {
+    border-color: $blue-purple;
+    color: $blue-purple;
+  }
+}
+
+
+
+.cards-grid {
+  display: grid;
+}
+
+.grid-movies {
+  grid-template-columns: 1fr 1fr;
+}
+
+.bookmark {
+  width: 450px;
+  height: 400px;
+  align-self: center;
+  justify-self: center;
+
+  .overview {
+    padding-left: 16px;
+    font-size: 14px;
+    text-align: justify;
+  }
+}
+
+.img-bookmark {
+    height: 100%;
+    // object-fit: contain;
+    // height: 100%;
+}
+
+.card-movie {
+}
+
+.comment {
+  color: $blue;
+  text-align: justify;
+}

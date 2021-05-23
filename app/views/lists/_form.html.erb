@@ -1,4 +1,4 @@
 <%= simple_form_for @list do |f| %>
   <%= f.input :name, input_html: { placeholder: "List name" } %>
-  <%= f.button :submit, input_html: { value: "Create new list" } %>
+  <%= f.button :submit, input_html: { value: "Create new list" }, class: "btn btn-action-filled btn-m"  %>
 <% end %>

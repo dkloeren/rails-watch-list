@@ -1,0 +1,18 @@
+
+<div class='bookmark'>
+  <div class="d-flex justify-content-between">
+    <div><p><%= @bookmark.movie.title %> | <%= @bookmark.movie.rating %> </p></div>
+    <div><%= link_to "Remove", bookmark_path(@bookmark), method: :delete %> </div>
+  </div>
+  <div class="d-flex w-100 h-75">
+    <img src="<%= @bookmark.movie.poster_url %>" alt="Poster of <%= @bookmark.movie.title %>" class="img-bookmark">
+    <div>
+      <p class="overview"> Overview </p>
+      <p class='overview'> Overview <%= @bookmark.movie.overview %> </p>
+    </div>
+  </div>
+  <div class="d-flex align-items-baseline justify-content-start comment p-4">
+    <i class="fas fa-comment-dots"></i>
+    <p class="ml-3"><%= @bookmark.comment %></p>
+  </div>
+</div>
