@@ -1,5 +1,5 @@
 <% if @html_options[:action] == 'lists-index' %>
-  <div class="banner <%= @html_options[:action] %>" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%), url(/assets/<%= @html_options[:banner][:image] %>);">
+  <div class="banner <%= @html_options[:action] %>" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%), url(<%= image_path @html_options[:banner][:image] %>);">
 <% elsif @html_options[:action] == 'lists-show' %>
   <div>
 <% end %>
