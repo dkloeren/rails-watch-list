@@ -22,7 +22,7 @@
     // white-space: nowrap;
     color: $light-gray;
     text-decoration: none;
-    transition: border-color 0.4s, box-shadow 0.4s;
+    transition: color 0.4s, border-color 0.4s, box-shadow 0.4s;
 
 
     &:hover {
@@ -35,6 +35,20 @@
 
     }
 }
+
+.btn-action-hollow {
+    padding: 16px 24px;
+    background-image: asset-url('Button_Frame.svg');
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #fff;
+    &:hover {
+      color: white;
+    }
+
+}
+
 
 .btn-m {
   // width: 200px;

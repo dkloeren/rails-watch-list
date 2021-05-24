@@ -1,10 +1,17 @@
 
 <h1 class="w-100 mb-4 py-4"><%= @list.name %></h1>
-<p><%= link_to "Add Bookmark", new_list_bookmark_path(@list) , html_options = {class: "btn btn-action-filled btn-m my-4"}  %></p>
+
+<p>
+  <%= link_to "Back to Homepage", lists_path(@list) , html_options = {class: "btn btn-action-hollow"}  %>
+  <%= link_to "+ Bookmark", new_list_bookmark_path(@list) , html_options = {class: "btn btn-action-filled btn-m my-4"}  %>
+  </p>
+
 <div class="cards-grid grid-movies">
   <% @list.bookmarks.each do |bookmark| %>
     <% @bookmark = bookmark %>
       <%= render 'movie_cards' %>
   <% end %>
-</ul>
+</div>
+
+
 
